@@ -17,6 +17,6 @@ namespace EmployeePayrollMultiThreading
         public decimal Deductions { get; set; }
         public decimal Taxable_Pay { get; set; }
         public decimal Income_Tax { get; set; }
-        public decimal Net_Pay { get; set; }
+        public decimal Net_Pay { get; set; }        
     }    
 }
