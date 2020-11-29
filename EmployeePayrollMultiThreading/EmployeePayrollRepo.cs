@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace EmployeePayrollMultiThreading
 {
@@ -12,7 +13,8 @@ namespace EmployeePayrollMultiThreading
         public static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=payroll_service;Integrated Security=True";
         /// Establishing the connection using the Sql Connection.
         public SqlConnection sqlConnection = new SqlConnection(connectionString);
-        public List<EmployeePayrollModel> employeePayrollList = new List<EmployeePayrollModel>();
+        List<EmployeePayrollModel> employeeModelList = new List<EmployeePayrollModel>();
+
         /// <summary>
         /// Adds the employee.
         /// </summary>
@@ -60,7 +62,11 @@ namespace EmployeePayrollMultiThreading
             }
             return false;
         }
-
+        /// <summary>
+        /// UC1
+        /// Adds the employee list to employee payroll data base.
+        /// </summary>
+        /// <param name="employeeModelList">The employee model list.</param>
         public void AddEmployeeListToEmployeePayrollDataBase(List<EmployeePayrollModel> employeeModelList)
         {
             employeeModelList.ForEach(employeeData =>
@@ -69,7 +75,26 @@ namespace EmployeePayrollMultiThreading
                 this.AddEmployee(employeeData);
                 Console.WriteLine("Employee added: "+ employeeData.Name);
             });
-            Console.WriteLine(this.employeePayrollList.ToString());
+            Console.WriteLine(this.employeeModelList.ToString());
+        }
+        /// <summary>
+        /// UC2
+        /// Adding Multiple Employee Using thread
+        /// </summary>
+        /// <param name="employeeModelList"></param>
+        public void AddMultipleEmployeeUsingThread(List<EmployeePayrollModel> employeeModelList)
+        {
+            employeeModelList.ForEach(employeeData =>
+            {
+                Task task = new Task(() =>
+                {
+                    Console.WriteLine("Employee being added: " + employeeData.Name);
+                    Console.WriteLine("Current thread Id: " + Thread.CurrentThread.ManagedThreadId);
+                    this.AddEmployee(employeeData);
+                    Console.WriteLine("Employee Added:  " + employeeData.Name);
+                });
+                task.Start();
+            });
         }
     }
 }
