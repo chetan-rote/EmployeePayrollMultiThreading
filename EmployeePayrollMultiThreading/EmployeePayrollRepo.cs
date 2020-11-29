@@ -14,7 +14,8 @@ namespace EmployeePayrollMultiThreading
         /// Establishing the connection using the Sql Connection.
         public SqlConnection sqlConnection = new SqlConnection(connectionString);
         List<EmployeePayrollModel> employeeModelList = new List<EmployeePayrollModel>();
-
+        /// Mutex is a synchronization primitive to implement interthread execution synchronization.
+        private static Mutex mutex = new Mutex();
         /// <summary>
         /// Adds the employee.
         /// </summary>
@@ -94,6 +95,29 @@ namespace EmployeePayrollMultiThreading
                     Console.WriteLine("Employee Added:  " + employeeData.Name);
                 });
                 task.Start();
+            });
+        }
+        /// <summary>
+        /// UC3
+        /// Adds the multiple employee with thread syncronization.
+        /// </summary>
+        /// <param name="employeeModelList">The employee model list.</param>
+        public void AddMultipleEmployeeWithThreadSyncronization(List<EmployeePayrollModel> employeeModelList)
+        {
+            employeeModelList.ForEach(employeeData =>
+            {
+                Task task = new Task(() =>
+                {
+                    /// This will block any incoming thread unless the thread execution completes
+                    mutex.WaitOne();
+                    Console.WriteLine("Employee Being Added: " + employeeData.Name);
+                    Console.WriteLine("Current thread Id: " + Thread.CurrentThread.ManagedThreadId);
+                    this.AddEmployee(employeeData);
+                    Console.WriteLine("Employee Added: " + employeeData.Name);
+                    mutex.ReleaseMutex();
+                });
+                task.Start();
+                task.Wait();
             });
         }
     }
