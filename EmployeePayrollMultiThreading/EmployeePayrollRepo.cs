@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 namespace EmployeePayrollMultiThreading
 {
     public class EmployeePayrollRepo
-    {
+    {        
+        /// Adding Nlog to log details for monitoring.
+        Nlog nLog = new Nlog();
         /// Specifying the connection string from the sql server connection.
         public static string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=payroll_service;Integrated Security=True";
         /// Establishing the connection using the Sql Connection.
@@ -72,8 +74,10 @@ namespace EmployeePayrollMultiThreading
         {
             employeeModelList.ForEach(employeeData =>
             {
+                nLog.LogDebug("Adding of Employee: " + employeeData.Name + "with ThreadId: " + Thread.CurrentThread.ManagedThreadId);
                 Console.WriteLine("Employee being added: " + employeeData.Name);
                 this.AddEmployee(employeeData);
+                nLog.LogInfo("Employee Successfully added in Database with ThreadId: " + Thread.CurrentThread.ManagedThreadId);
                 Console.WriteLine("Employee added: "+ employeeData.Name);
             });
             Console.WriteLine(this.employeeModelList.ToString());
@@ -87,11 +91,13 @@ namespace EmployeePayrollMultiThreading
         {
             employeeModelList.ForEach(employeeData =>
             {
+                nLog.LogDebug("Adding the Employee: " + employeeData.Name + " with ThreadID: " + Thread.CurrentThread.ManagedThreadId);
                 Task task = new Task(() =>
                 {
                     Console.WriteLine("Employee being added: " + employeeData.Name);
                     Console.WriteLine("Current thread Id: " + Thread.CurrentThread.ManagedThreadId);
                     this.AddEmployee(employeeData);
+                    nLog.LogInfo("Employee Successfully added in Database with ThreadId: " + Thread.CurrentThread.ManagedThreadId);
                     Console.WriteLine("Employee Added:  " + employeeData.Name);
                 });
                 task.Start();
@@ -106,6 +112,7 @@ namespace EmployeePayrollMultiThreading
         {
             employeeModelList.ForEach(employeeData =>
             {
+                nLog.LogDebug("Adding the Employee: " + employeeData.Name + " with ThreadId: " + Thread.CurrentThread.ManagedThreadId);
                 Task task = new Task(() =>
                 {
                     /// This will block any incoming thread unless the thread execution completes
@@ -114,6 +121,8 @@ namespace EmployeePayrollMultiThreading
                     Console.WriteLine("Current thread Id: " + Thread.CurrentThread.ManagedThreadId);
                     this.AddEmployee(employeeData);
                     Console.WriteLine("Employee Added: " + employeeData.Name);
+                    nLog.LogInfo("Employee Successfully added in Database via ThreadId: " + Thread.CurrentThread.ManagedThreadId);
+                    /// It marks the end of execution of thread
                     mutex.ReleaseMutex();
                 });
                 task.Start();

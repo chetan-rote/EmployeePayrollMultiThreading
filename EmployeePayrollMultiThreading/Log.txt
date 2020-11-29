@@ -1,0 +1,60 @@
+﻿2020-11-29 21:07:45.0452|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding of Employee: Mukeshwith ThreadId: 5
+2020-11-29 21:07:56.8541|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 5
+2020-11-29 21:07:56.8778|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding of Employee: Rajeshwith ThreadId: 5
+2020-11-29 21:07:56.8778|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 5
+2020-11-29 21:07:56.8778|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding of Employee: Poojawith ThreadId: 5
+2020-11-29 21:07:56.8792|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 5
+2020-11-29 21:07:56.8792|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding of Employee: Ameywith ThreadId: 5
+2020-11-29 21:07:56.8792|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 5
+2020-11-29 21:07:56.8792|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding of Employee: Punamwith ThreadId: 5
+2020-11-29 21:07:56.8792|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 5
+2020-11-29 21:07:57.0880|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Mukesh with ThreadId: 5
+2020-11-29 21:07:57.0880|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database via ThreadId: 11
+2020-11-29 21:07:57.1039|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Rajesh with ThreadId: 5
+2020-11-29 21:07:57.1039|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database via ThreadId: 12
+2020-11-29 21:07:57.1039|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Pooja with ThreadId: 5
+2020-11-29 21:07:57.1039|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database via ThreadId: 12
+2020-11-29 21:07:57.1039|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Amey with ThreadId: 5
+2020-11-29 21:07:57.1039|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database via ThreadId: 12
+2020-11-29 21:07:57.1039|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Punam with ThreadId: 5
+2020-11-29 21:07:57.1039|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database via ThreadId: 12
+2020-11-29 21:07:57.1141|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Mukesh with ThreadID: 5
+2020-11-29 21:07:57.1141|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Rajesh with ThreadID: 5
+2020-11-29 21:07:57.1141|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Pooja with ThreadID: 5
+2020-11-29 21:07:57.1141|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Amey with ThreadID: 5
+2020-11-29 21:07:57.1141|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Punam with ThreadID: 5
+2020-11-29 21:07:57.1346|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 11
+2020-11-29 21:07:57.1346|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 10
+2020-11-29 21:07:57.1346|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 11
+2020-11-29 21:07:57.1346|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 13
+2020-11-29 21:07:57.1346|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 12
+2020-11-29 21:11:39.4530|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding of Employee: Mukeshwith ThreadId: 5
+2020-11-29 21:11:40.1640|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 5
+2020-11-29 21:11:40.1640|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding of Employee: Rajeshwith ThreadId: 5
+2020-11-29 21:11:40.1640|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 5
+2020-11-29 21:11:40.1640|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding of Employee: Poojawith ThreadId: 5
+2020-11-29 21:11:40.1640|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 5
+2020-11-29 21:11:40.1640|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding of Employee: Ameywith ThreadId: 5
+2020-11-29 21:11:40.1640|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 5
+2020-11-29 21:11:40.1640|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding of Employee: Punamwith ThreadId: 5
+2020-11-29 21:11:40.1640|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 5
+2020-11-29 21:11:40.2022|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Mukesh with ThreadId: 5
+2020-11-29 21:11:40.2022|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database via ThreadId: 11
+2020-11-29 21:11:40.2022|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Rajesh with ThreadId: 5
+2020-11-29 21:11:40.2022|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database via ThreadId: 4
+2020-11-29 21:11:40.2022|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Pooja with ThreadId: 5
+2020-11-29 21:11:40.2022|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database via ThreadId: 4
+2020-11-29 21:11:40.2022|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Amey with ThreadId: 5
+2020-11-29 21:11:40.2074|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database via ThreadId: 11
+2020-11-29 21:11:40.2074|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Punam with ThreadId: 5
+2020-11-29 21:11:40.2074|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database via ThreadId: 11
+2020-11-29 21:11:40.2074|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Mukesh with ThreadID: 5
+2020-11-29 21:11:40.2074|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Rajesh with ThreadID: 5
+2020-11-29 21:11:40.2074|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Pooja with ThreadID: 5
+2020-11-29 21:11:40.2074|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Amey with ThreadID: 5
+2020-11-29 21:11:40.2074|DEBUG|EmployeePayrollMultiThreading.Nlog|Adding the Employee: Punam with ThreadID: 5
+2020-11-29 21:11:40.2074|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 4
+2020-11-29 21:11:40.2074|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 4
+2020-11-29 21:11:40.2074|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 4
+2020-11-29 21:11:40.2074|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 4
+2020-11-29 21:11:40.2074|INFO|EmployeePayrollMultiThreading.Nlog|Employee Successfully added in Database with ThreadId: 4
